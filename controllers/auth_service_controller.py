@@ -23,7 +23,7 @@ def auth():
     else :
         return jsonify({'authenticated': False, 'message': 'Invalid credentials'}) 
     
-@app.route('/status', methods=['GET'])
+@app.route('/auth/status', methods=['GET'])
 def status():
     
     auth_response = requests.get(f"{authentication_service_url}/status")

@@ -10,4 +10,4 @@ def _get_token_parameters():
     with open(token_path, 'r') as f:
         response = json.load(f)
        
-    return response['data']['accessToken'], response['data']['refreshToken']
+    return response['data']['signin']['accessToken'], response['data']['signin']['refreshToken']
